@@ -18,12 +18,15 @@ body {
 
 // Links
 // -----
-
+a:hover, a:focus {
+  color: @linkColorHover;
+  text-decoration: underline;
+}
+a:visited {
+  color: @linkColorVisited;
+}
+a.alwaysunvisited:visited,
 a {
   color: @linkColor;
   text-decoration: none;
-}
-a:hover {
-  color: @linkColorHover;
-  text-decoration: underline;
 }
