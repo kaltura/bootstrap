@@ -23,14 +23,14 @@ ul.kaltura-menu {
 }
 ul.dropdown-menu {
   padding: 0 0;
-  margin: 0 0 0;
+  margin: 0px 0 0;
 }
 
 /* Application specific menu */
 
 #kaltura-content-menu-header
 {
-  padding-top: 1em;
+  padding-top: 1.1em;
   padding-bottom: 1em; 
   margin-bottom: 90px;
   background-color: #ff8c38;
@@ -38,23 +38,32 @@ ul.dropdown-menu {
   background: -webkit-linear-gradient(30deg, rgb(164,69,26) 0%, #ff8c38 25%, #e36d29 40%, #ff8c38 80%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8c38', endColorstr='#A4451A', gradientType='1');
 }
-#kaltura-content-menu {
-  height:54px;
+.content-menu {
   font-size: 1.1em;
   text-shadow: rgba(0, 0, 0, .2) -1px -1px 1px;
   font-weight: bold;
   color: white;
 }
-#kaltura-content-menu a
+.content-menu a
 {
   color: white;
 }
-#kaltura-content-menu a:hover
+.content-menu .active a {
+  background-color:transparent !important;
+}
+.content-menu .active a,
+.content-menu .active a:active,
+.content-menu .active a:hover {
+  color: @grayDarker !important;
+}
+.content-menu li.active,
+.content-menu a:hover
 {
   color: #DCDCDC;
   text-decoration: none;
+  background-color:transparent !important;
 }
-#kaltura-content-menu a.selected
+.content-menu li.active
 {
   color: #3b3b3b;
   font-weight: bold;
@@ -66,17 +75,11 @@ ul.dropdown-menu {
   padding-bottom:20px;
    */
 }
-#kaltura-masthead-menu a.selected
+.masthead-menu li.selected
 {
   color: #E34C26;
   font-weight: bold;
   text-decoration: underline;
-  /* no background right now
-  background: url(kaltura-images/content-menu-hover.png);
-  background-repeat:no-repeat;
-  background-position:center bottom;
-  padding-bottom:20px;
-   */
 }
 #kaltura-content-menu li
 {
@@ -91,61 +94,48 @@ ul.dropdown-menu {
   margin-top:0px;
 }
 
-.grid_1 p,
-.grid_2 p,
-.grid_3 p
-{
-  margin-right:15px;
-}
-
 /* Content Sidebar */
 
 #kaltura-sidebar {
   display: block;
   float: right;
-  width: 286px;
-  /* These styles will make the sidebar merge with the content-menu
-  top:-90px;
-  margin-bottom:-90px;
-  padding:10px;
-  position:relative;
-  background-color: #BCDBE2;
-  border:0px;
-   */
 }
-#kaltura-sidebar{
-  padding-top: 24px;
-  font-size:.86em;
-}
-.kaltura-sidebar-menu {
+ul.kaltura-sidebar-menu {
   text-align:left;
-}
-.kaltura-sidebar-menu span {
-  font-weight: bold;
-  font-size: 1em;
-}
-.kaltura-sidebar-menu ul {
   list-style: none;
-}
-.kaltura-sidebar-menu nav {
-  float: right;
 }
 .kaltura-sidebar-menu li {
   float: none;
 }
 
-/* Kaltura Footer */
 
-#kaltura-footer-banner
+/* Kaltura Footer */
+div.kaltura-footer-banner
 {
   height:90px;
+  margin-bottom:90px;
   background-color: #21879d;
-  margin-top: 72px;
 }
-#kaltura-footer
+.kaltura-footer {
+  padding-top:3em;
+  font-size: .9em;
+  color: @white;
+}
+.kaltura-footer a:visited,
+.kaltura-footer a {
+  color: @grayLighter;
+  text-decoration: underline;
+}
+.kaltura-footer a:active,
+.kaltura-footer a:hover {
+  color: @white;
+  background-color:transparent !important;
+}
+.kaltura-footer .nav > li >  a{
+  text-decoration: none;
+}
+.kaltura-footer-background
 {
-  margin-top: 90px;
-  padding-bottom:64px;
   background-color: #71787a;
   background-image: -webkit-gradient(
   linear,
@@ -163,53 +153,10 @@ ul.dropdown-menu {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71787a', endColorstr='#222222', gradientType='0');
 }
-#kaltura-footer-remarks
-{
-  width: 674px;
-  color:#fff;
-  font-size: .8em;
-  padding-top: 24px;
-  display:inline;
-  float:left;
-}
-#kaltura-footer-social
-{
-  display:inline;
-  float:left;
-  width: 262px;
-  padding-top: 24px;
-  padding-left: 24px;
-}
-#kaltura-footer-social span
-{
-  color:white;
-  font-weight: bold;
-}
-#kaltura-footer-lists {
-  padding-top: 24px;
-}
-.kaltura-footer-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-right: 1em;
-  padding-top: 0px;
-}
-.kaltura-footer-list li {
-  float: none;
-  margin: 0 0;
-  line-height: 1.5em;
-}
-.kaltura-footer-list li a {
-  color:white;
-}
-.kaltura-footer-list span a {
-  color:white;
-  font-weight: bold;
-}
 .kaltura-footer-rule { 
   margin: 0 -24px;
   margin-top: 24px;
+  margin-bottom: 24px;
   border:0;
   height: 1px;
   background: rgb(113,120,122);
@@ -232,6 +179,14 @@ ul.dropdown-menu {
   margin-top: 24px;
   margin-bottom: 0;
 }
+.kaltura-partners ul {
+  list-style:none;
+}
+.kaltura-partners ul,
+.kaltura-partners li {
+  float:left;
+  display:inline;
+}
 .kaltura-partners a {
   opacity: .8;
 }
@@ -239,7 +194,7 @@ ul.dropdown-menu {
   opacity: 1;
 }
 .kaltura-partners img {
-  margin:0 1em;
+  margin:0 2em;
 }
 .kaltura-partners img.footer-html5-logo {
   position: relative;
@@ -249,18 +204,13 @@ ul.dropdown-menu {
   position: relative;
   top:15px;
 }
-.kaltura-partners .grid_1 {
-  width: 300px;
-}
-.kaltura-partners .grid_2 {
-  width: 580px;
-}
 .kaltura-vertical-rule {
   display:inline;
   float:left;
   position:relative;
   height:60px;
-  margin: 0 1em;
+  margin: 0;
+  margin-left:-1px;
   width: 1px;
   background: rgb(113,120,122);
   background: 
@@ -276,37 +226,23 @@ ul.dropdown-menu {
   background: -moz-linear-gradient(bottom, 
   rgba(113,120,122,.25), rgba(255,255,255,.25), rgba(255,255,255,.25), rgba(255,255,255,.25), rgba(113,120,122,.25));
 }
-.kaltura-footer-list {
+div.kaltura-footer-list {
   display:inline;
   float: left;
-  position: relative;
-  font-size: .8em;
   margin-left: 0px;
   margin-right: 0px;
-  width:137px;
+  width:130px;
 }
-
-#kaltura-copyright
-{
-  padding-top: 24px;
+div.kaltura-footer-list span {
+  font-weight:bold;
+}
+.kaltura-footer-social p {
+  font-weight: bold;
+}
+div.kaltura-footer-social > div {
   display:block;
-  color:#000;
-  font-size: .8em;
-}
-#kaltura-copyright p
-{
-  margin-right: 1em;
-}
-#kaltura-copyright a,
-#kaltura-copyright a:hover,
-#kaltura-copyright a:visited
-{
-  text-decoration: underline;
-  color:#000;
-}
-#kaltura-footer-social > * {
+  clear:both;
   float:right;
-  padding-left:.15em;
 }
 div.kaltura-share {
   float:right;
