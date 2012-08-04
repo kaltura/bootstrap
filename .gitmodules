@@ -1,0 +1,6 @@
+[submodule "vendor/FontAwesome"]
+	path = vendor/FontAwesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "vendor/Sharrre"]
+	path = vendor/Sharrre
+	url = https://github.com/Julienh/Sharrre.git
