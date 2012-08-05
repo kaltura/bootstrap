@@ -97,7 +97,19 @@ ul.dropdown-menu {
 /* Hacks to make the content area look better */
 .kaltura-first-title
 {
+  display:block;
   margin-top:0px;
+  min-height:50px;
+  line-height:1.1em;
+  margin-bottom:1em;
+  font-size:40px;
+}
+.kaltura-first-title:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 /* Content Sidebar */
@@ -233,7 +245,8 @@ div.kaltura-footer-banner
   rgba(113,120,122,.25), rgba(255,255,255,.25), rgba(255,255,255,.25), rgba(255,255,255,.25), rgba(113,120,122,.25));
 }
 div.kaltura-footer-list {
-  display:inline;
+  display:inline-block;
+  vertical-align: top;
   float: left;
   margin-left: 0px;
   margin-right: 0px;
@@ -241,6 +254,9 @@ div.kaltura-footer-list {
 }
 div.kaltura-footer-list span {
   font-weight:bold;
+}
+div.kaltura-footer-list-container {
+  overflow:hidden;
 }
 .kaltura-footer-social p {
   font-weight: bold;
