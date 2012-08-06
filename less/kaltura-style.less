@@ -95,16 +95,17 @@ ul.dropdown-menu {
 }
 
 /* Hacks to make the content area look better */
-.kaltura-first-title
-{
-  display:inline-block;
+.kaltura-first-title {
+  display:block;
   margin-top:0px;
   min-height:50px;
   line-height:1.1em;
   margin-bottom:1em;
   margin-left:75px;
-  font-size:50px;
+  font-size:35px;
+  text-align: justify;
 }
+/*
 .kaltura-first-title:after {
   content: ".";
   display: block;
@@ -112,7 +113,7 @@ ul.dropdown-menu {
   clear: both;
   visibility: hidden;
 }
-
+*/
 /* Content Sidebar */
 
 #kaltura-sidebar {
@@ -132,6 +133,7 @@ ul.kaltura-sidebar-menu {
 div.kaltura-footer-banner
 {
   height:90px;
+  margin-top:120px;
   margin-bottom:90px;
   background-color: #21879d;
 }
@@ -213,7 +215,7 @@ div.kaltura-footer-banner
   opacity: 1;
 }
 .kaltura-partners img {
-  margin:0 2em;
+  margin:2em 2em;
 }
 .kaltura-partners img.footer-html5-logo {
   position: relative;
@@ -224,10 +226,10 @@ div.kaltura-footer-banner
   top:15px;
 }
 .kaltura-vertical-rule {
-  display:inline;
+  display:inline-block;
   float:left;
-  position:relative;
-  height:60px;
+  position:absolute;
+  height:100px;
   margin: 0;
   margin-left:-1px;
   width: 1px;
@@ -271,4 +273,57 @@ div.kaltura-share {
   float:right;
   display:inline;
   margin-right: 64px;
+}
+.sharrre .box{
+  float:left;
+  margin-right: 1em;
+}
+.sharrre .count {
+  color:#444444;
+  display:block;
+  font-size:17px;
+  line-height:34px;
+  height:34px;
+  padding:4px 0;
+  position:relative;
+  text-align:center;
+  text-decoration:none;
+  width:50px;
+  background-color:#eee;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px; 
+}
+.sharrre .share {
+  color:#FFFFFF;
+  display:block;
+  font-size:11px;
+  height:16px;
+  line-height:16px;
+  margin-top:3px;
+  padding:0;
+  text-align:center;
+  text-decoration:none;
+  width:50px;
+  background-color:#9CCE39;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px; 
+}
+.sharrre .buttons {
+  display:none;
+  position:absolute;
+  margin-left:50px;
+  z-index:10;
+  background-color:#fff;
+}
+.sharrre .button {
+  float:left;
+  max-width:50px;
+  margin-left:10px;
+}
+@media (max-width: 480px) {
+	.kaltura-first-title {
+		font-size:20px;
+	}
 }
